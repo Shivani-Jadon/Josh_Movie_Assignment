@@ -1,6 +1,42 @@
 body{
     background: -webkit-linear-gradient(45deg, cadetblue, darkslategray);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 100vw;
-    height: 00vh;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.input-list-container, .display-list-container{
+    /* margin: 10% 20%; */
+    min-height: 50vh;
+}
+.input-list, .movie-list{
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px #c1c1c1 solid;
+    border-radius: 4px;
+    width: 40%;
+    margin: 4.7%;
+    height: 200px;
+}
+.movie-list{
+    width: 30%;
+    margin: 1.2%;
+}
+#input-div1{
+    background-color: white;
+}
+#input-div2{
+    background-color: black;
+}
+
+#movie-div1{
+    background-color: darkslateblue;
+}
+#movie-div2{
+    background-color: darksalmon;
+}
+#movie-div3{
+    background-color: hotpink;
 }
