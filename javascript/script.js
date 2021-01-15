@@ -57,14 +57,14 @@ for(let i = 0; i < movies_input.length; i++){
 
         if(i == 0){
 
-            // document.getElementById("list1").innerHTML = "";
+            document.getElementById("list1").innerHTML = "";
 
-            // for(let movie of list1){
-            //     let li = document.createElement("li");
-            //     li.innerText = movie;
-            //     document.getElementById("list1").appendChild(li);
-            // }
-
+            for(let movie of list1){
+                let li = document.createElement("li");
+                li.innerText = movie;
+                document.getElementById("list1").appendChild(li);
+            }
+            
             document.getElementById("list2").innerHTML = "";
 
             for(let movie of list2){
@@ -82,7 +82,5 @@ for(let i = 0; i < movies_input.length; i++){
             }
         }
         
-    }
-    
-    
+    }    
 }
