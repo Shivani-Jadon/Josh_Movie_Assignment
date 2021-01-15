@@ -44,15 +44,45 @@ for(let i = 0; i < movies_input.length; i++){
 
     movies_input[i].onfocus = function() {
         movies_input[i].value = "";
+
+        if(i == 1){
+            document.getElementById("list1").innerHTML = "";
+
+            for(let movie of list1){
+                let li = document.createElement("li");
+                li.innerText = movie;
+                document.getElementById("list1").appendChild(li);
+            }
+        }
+
+        if(i == 0){
+
+            // document.getElementById("list1").innerHTML = "";
+
+            // for(let movie of list1){
+            //     let li = document.createElement("li");
+            //     li.innerText = movie;
+            //     document.getElementById("list1").appendChild(li);
+            // }
+
+            document.getElementById("list2").innerHTML = "";
+
+            for(let movie of list2){
+                let li = document.createElement("li");
+                li.innerText = movie;
+                document.getElementById("list2").appendChild(li);
+            }
+
+            document.getElementById("list3").innerHTML = "";
+            
+            for(let movie of list3){
+                let li = document.createElement("li");
+                li.innerText = movie;
+                document.getElementById("list3").appendChild(li);
+            }
+        }
+        
     }
     
+    
 }
-
-
-// const handlechange = (event) => {
-//     event.target.value;
-// }
-
-// const handleClick = (event) => {
-
-// }
