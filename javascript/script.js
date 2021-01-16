@@ -93,8 +93,19 @@ for(let i = 0; i < movies_input.length; i++){
         localStorage.setItem('movieListA', JSON.stringify(list1));
         localStorage.setItem('movieListB', JSON.stringify(list2));
         localStorage.setItem('movieListC', JSON.stringify(list3));
-
         
     }    
 }
 
+// FUNCTION FOR CLEARING DATA
+function clearData() {
+    list1 = [];
+    localStorage.removeItem('movieListA');
+    document.getElementById("list1").innerHTML = "";
+    list2 = [];
+    localStorage.removeItem('movieListB');
+    document.getElementById("list2").innerHTML = "";
+    list3 = [];
+    localStorage.removeItem('movieListC');
+    document.getElementById("list3").innerHTML = "";
+}
