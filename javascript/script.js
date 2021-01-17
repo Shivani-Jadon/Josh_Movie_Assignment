@@ -131,3 +131,13 @@ function clearData() {
     document.getElementById("list3").innerHTML = "";
     localStorage.clear();
 }
+
+
+// SIDE PANEL
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "100vw";
+}
+
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}

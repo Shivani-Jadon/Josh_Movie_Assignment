@@ -97,3 +97,79 @@ body{
 .btn-container button:hover{
     background: black;
 }
+
+/* intruction side panel */
+.header h1 {
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 4px 3px 3px black;
+    color: white;
+}
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #ffde03;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  .sidepanel ul {
+    list-style: none;
+    font-size: 4vh;
+    padding: 0px;
+    padding: 10px;
+  }
+  .sidepanel li {
+    margin: 10px;
+    border: 1px white solid;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  #panel-btn-container {
+      text-align: end;
+  }
+  .openbtn {
+    position: relative;
+    top: -50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: 2px #424242 solid;
+    border-radius: 50%;
+  }
+  
+  .openbtn:hover {
+    background-color:#444;
+  }
+  
+  #book-img {
+      width: 20vw;
+  }
