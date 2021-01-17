@@ -4,15 +4,18 @@ let list1 = [];
 let list2 = [];
 let list3 = [];
 
-list1 = localStorage.getItem('movieListA');
-list1 = JSON.parse(list1);
-console.log("list 1 : ",list1);
-list2 = localStorage.getItem('movieListB');
-list2 = JSON.parse(list2);
-console.log("list 2 : ",list2);
-list3 = localStorage.getItem('movieListC');
-list3 = JSON.parse(list3);
-console.log("list 3 : ",list3);
+if( localStorage.length != 0){
+    list1 = localStorage.getItem('movieListA');
+    list1 = JSON.parse(list1);
+    console.log("list 1 : ",list1);
+    list2 = localStorage.getItem('movieListB');
+    list2 = JSON.parse(list2);
+    console.log("list 2 : ",list2);
+    list3 = localStorage.getItem('movieListC');
+    list3 = JSON.parse(list3);
+    console.log("list 3 : ",list3);
+
+}
 
 let movies_input = document.getElementsByClassName("textarea1");
 console.log(movies_input);
@@ -100,12 +103,13 @@ for(let i = 0; i < movies_input.length; i++){
 // FUNCTION FOR CLEARING DATA
 function clearData() {
     list1 = [];
-    localStorage.removeItem('movieListA');
+    // localStorage.removeItem('movieListA');
     document.getElementById("list1").innerHTML = "";
     list2 = [];
-    localStorage.removeItem('movieListB');
+    // localStorage.removeItem('movieListB');
     document.getElementById("list2").innerHTML = "";
     list3 = [];
-    localStorage.removeItem('movieListC');
+    // localStorage.removeItem('movieListC');
     document.getElementById("list3").innerHTML = "";
+    localStorage.clear();
 }
