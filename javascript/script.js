@@ -30,33 +30,51 @@ for(let i = 0; i < movies_input.length; i++){
         if(i == 0) {
             list1 = list1.concat(movies_input[0].value.split("\n"));
             list1 = [...new Set(list1)];
-            // console.log(list1);
+            console.log(list1);
 
-            list2.map((movie2, ind2) => {
-                list1.map((movie1, ind1) => {
-                    if(movie1 == movie2){
-                        list3.push(movie1);
+            for(let ind1=0; ind1 < list1.length; ind1++) {
+
+                for(let ind3=0; ind3 < list3.length; ind3++) {
+                    if(list3[ind3] == list1[ind1]){
+                        list1.splice(ind1,1);
+                        break;
+                    }
+                }
+                for(let ind2=0; ind2 < list2.length; ind2++) {
+                    if(list2[ind2] == list1[ind1]){
+                        list3.push( list1[ind1] );
                         list1.splice(ind1,1);
                         list2.splice(ind2,1);
+                        break;
                     }
-                })
-            })
+                }
+            }
+            
         }
 
         if(i == 1) {
             list2 = list2.concat(movies_input[1].value.split("\n"));
             list2 = [...new Set(list2)];
+            console.log(list2);
 
+            for(let ind2=0; ind2 < list2.length; ind2++) {
 
-            list1.map((movie, ind1) => {
-                list2.map((movie2, ind2) => {
-                    if(movie2 == movie){
-                        list3.push(movie);
+                for(let ind3=0; ind3 < list3.length; ind3++) {
+                    if(list3[ind3] == list2[ind2]){
+                        list2.splice(ind2,1);
+                        break;
+                    }
+                }
+                for(let ind1=0; ind1 < list1.length; ind1++) {
+                    if(list2[ind2] == list1[ind1]){
+                        list3.push( list2[ind2] );
                         list1.splice(ind1,1);
                         list2.splice(ind2,1);
+                        break;
                     }
-                })
-            })
+                }
+            }
+            
         }
 
     }
