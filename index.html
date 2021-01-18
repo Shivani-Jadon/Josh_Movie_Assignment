@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie List</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Movie Express</h1>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <ul>
+                    <li>Input boxes to input movie for two users</li>
+                    <li>Common movies of user A and B in third list</li>
+                    <li>Click on input boxes to fill the lists</li>
+                    <li>Prepare movie lists that you and your frind has watched</li>
+                </ul>
+                <img id="book-img" src="https://www.flaticon.com/svg/vstatic/svg/1454/1454500.svg?token=exp=1610898847~hmac=8477a648869e84bbcd4012116a3d107c">
+            </div>
+            <div id="panel-btn-container">
+                <button class="openbtn" onclick="openNav()">☰</button>  
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="input-list-container">
+                <div class="input-list" id="input-div1">
+                    <textarea class="textarea1" placeholder="Input list for User A"></textarea>
+                </div>
+                <div class="input-list" id="input-div2">
+                    <textarea class="textarea1"  placeholder="Input list for User B"></textarea>
+                </div>
+            </div>
+
+            <div class="display-list-container">
+                <div class="movie-list" id="movie-div1">
+                    <div class="list-title">Movie for A</div>
+                    <ul id="list1"></ul>
+                </div>
+                <div class="movie-list" id="movie-div2">
+                    <div class="list-title">Movies for B</div>
+                    <ul id="list2"></ul>
+                </div>
+                <div class="movie-list" id="movie-div3">
+                    <div class="list-title">Movies for A & B</div>
+                    <ul id="list3"></ul>
+                </div>
+                <div class="btn-container">
+                    <button id="clear-btn" onclick="clearData()">Clear Lists</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="javascript/script.js"></script>
+    </body>
+</html>
